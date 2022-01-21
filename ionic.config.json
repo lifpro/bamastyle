@@ -1,5 +1,7 @@
 {
   "name": "bamastyle",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
