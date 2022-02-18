@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class Tab1Page {
 
   models: { id: number, nom: string, prix: number, photo: string }[] = [
+    { id: 0, nom: "Création", prix: 15000, photo: "photo0.png" },
     { id: 1, nom: "Abaya", prix: 25000, photo: "photo1.jpg" },
     { id: 2, nom: "Taille basse", prix: 12500, photo: "photo2.jpg" },
     { id: 3, nom: "Robe simple", prix: 5000, photo: "photo3.jpg" },

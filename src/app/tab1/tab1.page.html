@@ -11,9 +11,12 @@
     <img src="./assets/img/{{m.photo}}" />
     <ion-card-header>
       <ion-card-subtitle>{{m.nom}}</ion-card-subtitle>
-      <ion-card-title>{{m.prix}} CFA</ion-card-title>
+      <ion-card-title>
+        <span *ngIf="m.id==0">A partir de </span>{{m.prix}} CFA
+      </ion-card-title>
     </ion-card-header>
     <ion-card-content>
+      <ion-button expand="block" routerLink="/add-commande">Commander</ion-button>
     </ion-card-content>
   </ion-card>
 
