@@ -7,7 +7,17 @@
 </ion-header>
 
 <ion-content>
+  <ion-card *ngFor="let m of models">
+    <img src="./assets/img/{{m.photo}}" />
+    <ion-card-header>
+      <ion-card-subtitle>{{m.nom}}</ion-card-subtitle>
+      <ion-card-title>{{m.prix}} CFA</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
 
+  <!-- <div *ngFor="let m of models">Nom: {{m.nom}}</div> -->
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button routerLink="/add-catalogue">
       <ion-icon name="add"></ion-icon>
