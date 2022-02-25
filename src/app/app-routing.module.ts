@@ -8,23 +8,27 @@ const routes: Routes = [
   },
   {
     path: 'add-catalogue',
-    loadChildren: () => import('./add-catalogue/add-catalogue.module').then( m => m.AddCataloguePageModule)
+    loadChildren: () => import('./add-catalogue/add-catalogue.module').then(m => m.AddCataloguePageModule)
   },
   {
     path: 'add-commande',
-    loadChildren: () => import('./add-commande/add-commande.module').then( m => m.AddCommandePageModule)
+    loadChildren: () => import('./add-commande/add-commande.module').then(m => m.AddCommandePageModule)
   },
   {
     path: 'clients',
-    loadChildren: () => import('./clients/clients.module').then( m => m.ClientsPageModule)
+    loadChildren: () => import('./clients/clients.module').then(m => m.ClientsPageModule)
   },
   {
     path: 'profil',
-    loadChildren: () => import('./profil/profil.module').then( m => m.ProfilPageModule)
+    loadChildren: () => import('./profil/profil.module').then(m => m.ProfilPageModule)
   },
   {
     path: 'add-client',
-    loadChildren: () => import('./add-client/add-client.module').then( m => m.AddClientPageModule)
+    loadChildren: () => import('./add-client/add-client.module').then(m => m.AddClientPageModule)
+  },
+  {
+    path: 'edit-client/:id',
+    loadChildren: () => import('./edit-client/edit-client.module').then(m => m.EditClientPageModule)
   }
 ];
 @NgModule({
@@ -33,4 +37,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
