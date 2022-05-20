@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -8,5 +8,33 @@
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Nom</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Veuillez entrer votre nom"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Prénoms</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Veuillez entrer votre prénom"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Numéro de téléphone</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input type="number" placeholder="00000000"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Adresse</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-textarea rows="5" placeholder="Veuillez entrer votre adresse..."></ion-textarea>
+    </ion-item>
+
+  </ion-list>
+  <ion-button routerLink="/clients" expand="block" shape="round" color="primary">Enregistrer</ion-button>
 
 </ion-content>
