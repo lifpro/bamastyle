@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClientsExeterneService } from './clients-exeterne.service';
 
 @Component({
   selector: 'app-clients',
@@ -15,9 +16,28 @@ export class ClientsPage implements OnInit {
     { id: 5, nom: "Djénaba BA", numero: 76887654, adresse: "Missira" },
   ];
 
-  constructor() { }
+  clientEx = [];
+  constructor(protected srv: ClientsExeterneService) { }
 
   ngOnInit() {
+    this.srv.getClients().subscribe(reponse => {
+      console.log(reponse);
+      this.clientEx = this.formatData(reponse);
+      console.log(this.clientEx);
+    });
   }
+
+
+
+
+
+  formatData(data): any[] | any {
+    if (data && data.hasOwnProperty('content')) {
+      return data.content;
+    } else {
+      return data;
+    }
+  }
+
 
 }

@@ -39,5 +39,7 @@ export class AddCommandePage implements OnInit {
 
   ngOnInit() {
   }
-
+  saveCommande() {
+    alert('Commande enregistrée avec succès')
+  }
 }

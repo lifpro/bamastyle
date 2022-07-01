@@ -9,11 +9,11 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let c of clients" [routerLink]="'/edit-client/'+c.id">
+    <ion-item *ngFor="let c of clientEx" [routerLink]="'/edit-client/'+c.id">
       <ion-label>
-        <h2>{{c.nom}}</h2>
-        <h3>{{c.numero}}</h3>
-        <p>{{c.adresse}}</p>
+        <h2 titrePage>{{c.name}}</h2>
+        <h3>{{c.email}}</h3>
+        <p>{{c.address.street}}</p>
       </ion-label>
     </ion-item>
   </ion-list>

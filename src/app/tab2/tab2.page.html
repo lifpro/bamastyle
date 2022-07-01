@@ -7,6 +7,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-item *ngFor="let c of commandes">
+    <ion-avatar item-start>
+      <img src="{{c.client}}" />
+    </ion-avatar>
+    <h2>{{c.client.nom}}</h2>
+    <p>{{c.modele.nom}}</p>
+  </ion-item>
+
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button routerLink="/add-commande">
       <ion-icon name="add"></ion-icon>
